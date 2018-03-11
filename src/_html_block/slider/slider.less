@@ -1,0 +1,46 @@
+.slider {
+  &__btn {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+
+    margin-top: -17.5px;
+    padding: 0;
+
+    border: 0;
+    outline: none;
+    background: transparent;
+
+    font-size: 0;
+
+    cursor: pointer;
+
+    pointer-events: auto;
+    svg {
+      fill: #fff;
+    }
+  }
+  &__btn--left {
+    left: 2px;
+  }
+  &__btn--right {
+    right: 2px;
+  }
+}
+@media(min-width: @media768) {
+  .slider {
+    &__btn {
+      margin-top: -44px;
+      svg {
+        width: 88px;
+        height: 88px;
+      }
+    }
+    &__btn--left {
+      left: -10px;
+    }
+    &__btn--right {
+      right: -10px;
+    }
+  }
+}

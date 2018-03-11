@@ -1,0 +1,145 @@
+.whom {
+  position: relative;
+  // padding: 25px 0 20px;
+
+  background: #1a3c47;
+
+  text-align: center;
+  &__title {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    z-index: 10;
+
+    width: 100%;
+
+    color: #fff;
+  }
+  &__title-span {
+    position: relative;
+    &::after {
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+
+      width: 19%;
+      height: 2px;
+      min-width: 75px;
+
+      background: #fff;
+
+      content: "";
+    }
+  }
+  &__info {
+    margin: 0 0 47px;
+    padding: 0 30px;
+  }
+  &__img {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 21px;
+    svg {
+      display: inline;
+    }
+  }
+  &__name {
+    margin: 0 0 23px;
+
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    color: #9cc;
+    text-transform: capitalize;
+  }
+  &__descr {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.29;
+    color: #fff;
+  }
+  // slider
+  &__slider {
+    position: relative;
+    z-index: 2;
+  }
+  &__item {
+    margin-bottom: -20px;
+    padding: 81px 0 32px;
+
+    background: no-repeat 50% 50%;
+    background-size: cover;
+  }
+  &__item-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+}
+@media(min-width: @media768) {
+  .whom {
+    // padding: 89px 0 120px;
+    &__title {
+      top: 90px;
+    }
+    &__item-inner {
+      display: flex;
+      max-width: 700px;
+      margin: 0 auto;
+
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__info {
+      margin: 0;
+      padding: 0;
+    }
+    &__img {
+      width: 205px;
+      height: 205px;
+      margin: 0;
+
+      flex-shrink: 0;
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &__name {
+      margin: 0 0 20px;
+
+      font-size: 28px;
+      text-align: left;
+    }
+    &__descr {
+      max-width: 350px;
+
+      font-size: 16px;
+      line-height: 1.19;
+      text-align: left;
+    }
+    // slider
+    &__item {
+      margin-bottom: 0;
+      padding: 298px 0;
+    }
+    &__button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 20;
+
+      width: 100%;
+      height: 88px;
+      max-width: 1160px;
+      margin-top: -44px;
+      overflow: hidden;
+
+      transform: translateX(-50%);
+
+      pointer-events: none;
+    }
+  }
+}

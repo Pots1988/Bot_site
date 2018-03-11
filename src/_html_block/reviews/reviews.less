@@ -1,0 +1,114 @@
+.reviews {
+  position: relative;
+
+  padding: 25px 0 20px;
+
+  background: #1a3c47 no-repeat 50% 50%;
+  background-size: cover;
+
+  text-align: center;
+  &__title {
+    margin: 0 0 34px;
+
+    color: #fff;
+  }
+  &__title-span {
+    position: relative;
+    &::after {
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+
+      width: 19%;
+      height: 2px;
+
+      background: #fff;
+
+      content: "";
+    }
+  }
+  &__img {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 0 0 17px;
+    overflow: hidden;
+
+    vertical-align: middle;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__name {
+    margin: 0 0 2px;
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    color: #9cc;
+    text-transform: capitalize;
+  }
+  &__prof {
+    margin: 0 0 16px;
+
+    font-size: 18px;
+    line-height: 1.33;
+    color: #fffefe;
+  }
+  &__quote {
+    margin: 0 0 36px;
+    padding: 0;
+
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.43;
+    color: #fff;
+
+    quotes: "\0022" "\0022";
+    &::before {
+      content: open-quote;
+    }
+    &::before {
+      content: close-quote;
+    }
+  }
+}
+@media(min-width: @media768) {
+  .reviews {
+    padding: 90px 0 120px;
+    &__wrap {
+      position: relative;
+
+      overflow: hidden;
+    }
+    &__title {
+      margin: 0 0 120px;
+    }
+    &__img {
+      margin: 0 0 30px;
+    }
+    &__name {
+      margin: 0 0 10px;
+
+      font-size: 30px;
+    }
+    &__prof {
+      margin: 0 0 43px;
+
+      font-size: 24px;
+      line-height: 1;
+    }
+    &__quote {
+      max-width: 660px;
+      margin: 0 auto 100px;
+
+      font-size: 28px;
+      line-height: 1.29;
+      br {
+        display: none;
+      }
+    }
+  }
+}

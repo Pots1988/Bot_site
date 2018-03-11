@@ -1,0 +1,48 @@
+.connect {
+  background: #0e3b4b no-repeat 50% 50%;
+  background-size: cover;
+  &__text {
+    margin: 0 0 50px;
+
+    opacity: 0;
+
+    color: #fefefe;
+
+    transition: transform .4s linear, opacity .6s;
+    transform: translateY(30px);
+    .active & {
+      opacity: 1;
+
+      transform: translateY(0);
+    }
+  }
+  .btn {
+    width: 0;
+
+    opacity: 0;
+
+    transition: all .3s cubic-bezier( .6, .2, .1, 1 );
+  }
+  &.active {
+    .btn {
+      width: 220px;
+
+      opacity: 1;
+    }
+  }
+}
+@media(min-width: @media768) {
+  .connect {
+    &__text {
+      margin: 0 0 55px;
+      br {
+        display: none;
+      }
+    }
+    &.active {
+      .btn {
+        width: 322px;
+      }
+    }
+  }
+}

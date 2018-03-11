@@ -1,0 +1,170 @@
+.promo {
+  padding: 28px 0 27px;
+  overflow: hidden;
+
+  background: #29585c no-repeat 50% 50%;
+  background-size: cover;
+
+  color: #fff;
+  &__wrap {
+    position: relative;
+    &::after {
+      position: absolute;
+      top: -28px;
+      right: -10px;
+      bottom: -27px;
+      left: -10px;
+
+      background: rgba(4,37,63,.45);
+
+      content: "";
+    }
+  }
+  &__title {
+    margin: 0 0 44px;
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: center;
+  }
+  &__title-span {
+    position: relative;
+
+    display: block;
+    padding: 0 0 10px;
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+
+      width: 19%;
+      height: 2px;
+      max-width: 75px;
+      margin-left: -36px;
+
+      background: #fff;
+
+      content: "";
+    }
+  }
+  &__cont {
+    position: relative;
+    z-index: 10;
+  }
+  &__text {
+    margin: 0 0 26px;
+
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.33;
+    text-align: center;
+  }
+  &__img {
+    position: relative;
+    z-index: -1;
+
+    width: 272px;
+    // height: 564px;
+    margin: 0 auto 16px;
+    img {
+      display: block;
+      height: auto;
+      max-width: 100%;
+    }
+  }
+  &__bot {
+    position: absolute;
+    top: -15px;
+    left: -37px;
+
+    width: 440px;
+    height: 432px;
+    margin: 0;
+  }
+  &__connect {
+    text-align: center;
+  }
+  &__connect-name {
+    margin: 0 0 32px;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.19;
+  }
+}
+@media(min-width: @media768) {
+  .promo {
+    padding: 158px 0 85px;
+    &__wrap {
+      position: relative;
+      &::after {
+        top: -9999px;
+        right: -9999px;
+        bottom: -9999px;
+        left: -9999px;
+      }
+    }
+    &__cont {
+      padding-right: 300px;
+    }
+    &__title {
+      margin: 0 0 64px;
+
+      font-size: 48px;
+      line-height: 1;
+      text-align: left;
+      br {
+        display: none;
+      }
+    }
+    &__title-span {
+      &::after {
+        left: 0;
+
+        margin-left: 0;
+      }
+    }
+    &__text {
+      margin: 0 0 143px;
+
+      font-size: 30px;
+      line-height: 1.2;
+      text-align: left;
+      br {
+        display: none;
+      }
+    }
+    &__bot {
+      top: -273px;
+      left: -30px;
+
+      width: 1043px;
+      height: 1025px;
+    }
+    &__img {
+      position: absolute;
+      top: -87px;
+      right: 0;
+      z-index: auto;
+
+      width: 272px;
+      height: 564px;
+      margin: -33px 0 0;
+    }
+    &__descr {
+      max-width: 700px;
+    }
+    &__connect {
+      max-width: 700px;
+
+      text-align: left;
+    }
+    &__connect-name {
+      margin: 0 0 30px;
+
+      font-size: 24px;
+      line-height: 1.25;
+    }
+  }
+}
